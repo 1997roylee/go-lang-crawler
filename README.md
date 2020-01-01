@@ -17,11 +17,11 @@ func main() {
 	parameter := map[string]string{}
 
 	SetConfig(config) // Setup your taget which website you want to do the crawl (Domain, Path, Method)
-    SetHeader(header) // Setup the header method
+    	SetHeader(header) // Setup the header method
     
-    doc := GetResult(parameter) // Get the response from the request 
+    	doc := GetResult(parameter) // Get the response from the request 
     
-    // Query the selector via Go Query
+    	// Query the selector via Go Query
 	doc.Find("span").Each(func(i int, s *goquery.Selection) {
         log.Println(i, s.Text())
         // https://godoc.org/github.com/PuerkitoBio/goquery
