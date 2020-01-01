@@ -105,5 +105,4 @@ func main() {
 	doc.Find("span").Each(func(i int, s *goquery.Selection) {
 		log.Println(i, s.Text())
 	})
-
 }
